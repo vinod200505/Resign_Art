@@ -1,0 +1,6 @@
+{
+  "name": "Resin Art",
+  "description": "Premium handcrafted resin art bathroom accessories and luxury design stone soap dispensers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

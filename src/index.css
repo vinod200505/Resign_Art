@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-display: "Cinzel", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-gold-light: #F2E3C6;
+  --color-gold: #D4AF37;
+  --color-gold-dark: #AA8220;
+  
+  --color-rose-light: #E4B5B9;
+  --color-rose: #B76E79;
+  --color-rose-dark: #8F4C55;
+
+  --color-brand-bg: #0F0F0F;
+  --color-brand-card: #161616;
+  --color-brand-light: #F5F5F5;
+  --color-luxury-blue: #0A4D68;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Base resets and animations */
+html {
+  scroll-behavior: smooth;
+  background-color: #0F0F0F;
+  color: #F5F5F5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom visual utilities to design Awwwards style layouts */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f6ebd0 0%, #d4af37 50%, #aa8220 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-rose-gradient {
+  background: linear-gradient(135deg, #f4dfe2 0%, #b76e79 50%, #8f4c55 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-radial-luxury {
+  background: radial-gradient(circle at 50% 50%, #1c1c1c 0%, #0f0f0f 100%);
+}
+
+.bg-radial-gold {
+  background: radial-gradient(circle at 50% -20%, rgba(212, 175, 55, 0.15) 0%, rgba(15, 15, 15, 0) 60%);
+}
+
+.bg-radial-rose {
+  background: radial-gradient(circle at 50% 120%, rgba(183, 110, 121, 0.1) 0%, rgba(15, 15, 15, 0) 50%);
+}
+
+.border-gold-glass {
+  border: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.border-white-glass {
+  border: 1px solid rgba(245, 245, 245, 0.06);
+}
+
+.glass-morphic {
+  background: rgba(22, 22, 22, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-morphic-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Subtle cinematic scanline or grid noise effect */
+.noise-overlay {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Loading background overlay and shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #888 20%, #fff 50%, #888 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 5s linear infinite;
+}
